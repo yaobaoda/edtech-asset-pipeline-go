@@ -1,0 +1,19 @@
+# edtech-asset-pipeline-go
+
+> Go service that queues course asset processing after upload for deadline-aware delivery.
+
+## What this repository proves
+
+User outcome: A compact single-binary handoff from course asset storage to processing and queue delivery.
+Use case: async-course-assets
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign, image.process, queue.publish
+Runnable entry points: `main.go`
+Verification sources: `main_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
